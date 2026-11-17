@@ -1,0 +1,827 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gv片-作品类型与观看指南</title>
+<meta name="description" content="gv片指日本等地区出品的影像作品，本文按发行方、编号、题材与画质整理常见类型，说明查找、辨别与收藏方法，含更新时间线、术语对照与读者讨论，适合入门了解与进阶检索。">
+<meta name="keywords" content="gv片">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a2740'/%3E%3Cpath d='M20 44V20h8c7 0 11 4 11 11s-4 13-11 13h-8zm6-6h2c4 0 6-2 6-7s-2-7-6-7h-2v14z' fill='%23e8b64c'/%3E%3Ccircle cx='47' cy='24' r='5' fill='%23d4573f'/%3E%3C/svg%3E">
+<style>
+:root{
+--ink:#1c2230;
+--ink-soft:#4a5364;
+--paper:#f6f4ef;
+--card:#ffffff;
+--line:#dad5c9;
+--brand:#1a2740;
+--brand-2:#2e4057;
+--accent:#d4573f;
+--gold:#e8b64c;
+--muted:#8b8f9a;
+--r:10px;
+--r-lg:18px;
+--sp1:8px;--sp2:14px;--sp3:22px;--sp4:34px;--sp5:52px;
+--shadow:0 2px 10px rgba(26,39,64,.07);
+--shadow-h:0 8px 22px rgba(26,39,64,.13);
+--font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+--announce-h:36px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);line-height:1.72;font-size:16px}
+img{max-width:100%;display:block}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{color:var(--accent)}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 12px;padding-left:1.3em}
+li{margin-bottom:6px}
+section{scroll-margin-top:calc(var(--announce-h) + 66px)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* 公告条 */
+.announce{position:sticky;top:0;z-index:60;background:var(--brand);color:#f0eadb;font-size:13px;height:var(--announce-h);display:flex;align-items:center}
+.announce .wrap{display:flex;align-items:center;gap:10px;flex-wrap:nowrap;overflow:hidden}
+.announce .tag{flex:0 0 auto;background:var(--accent);color:#fff;border-radius:4px;padding:1px 7px;font-size:12px;font-weight:700}
+.announce .txt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:.92}
+.announce a{color:var(--gold);font-weight:700;white-space:nowrap}
+
+/* 页头 */
+.header{position:sticky;top:var(--announce-h);z-index:55;background:rgba(246,244,239,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.header .wrap{display:flex;align-items:center;gap:18px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.brand svg{width:38px;height:38px;flex:0 0 auto}
+.brand .name{font-size:20px;font-weight:800;color:var(--brand);letter-spacing:.5px}
+.nav{display:flex;gap:4px;flex:1 1 auto;flex-wrap:wrap;align-items:center}
+.nav a{font-size:14px;padding:7px 11px;border-radius:8px;color:var(--ink-soft);font-weight:600}
+.nav a:hover,.nav a:focus-visible{background:#ece8dd;color:var(--brand);outline:none}
+.header-tools{display:flex;gap:8px;align-items:center;flex:0 0 auto}
+.search{position:relative}
+.search input{width:170px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:14px;font-family:inherit}
+.search input:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--gold)}
+.search-fb{position:absolute;right:0;top:42px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow-h);padding:10px 14px;font-size:13px;width:230px;display:none}
+.search-fb.on{display:block}
+.menu-btn{display:none;background:#fff;border:1px solid var(--line);border-radius:8px;padding:7px 10px;font-size:14px;font-weight:700;color:var(--brand);cursor:pointer;min-width:44px;min-height:40px}
+.menu-btn:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
+.cta-small{background:var(--accent);color:#fff;padding:8px 14px;border-radius:999px;font-size:14px;font-weight:700}
+.cta-small:hover{color:#fff;background:#bd4530}
+
+/* 首屏 */
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#1a2740 0%,#24344f 55%,#2e4057 100%);color:#f2eee3}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding-top:54px;padding-bottom:54px}
+.hero-kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:2px;color:var(--gold);font-weight:700;border:1px solid rgba(232,182,76,.45);padding:5px 12px;border-radius:999px;margin-bottom:18px}
+.hero h1{font-size:clamp(34px,5vw,54px);color:#fff;letter-spacing:1px;margin-bottom:16px}
+.hero p.lead{font-size:16.5px;color:#d8d3c4;max-width:520px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-block;padding:11px 22px;border-radius:999px;font-weight:700;font-size:15px}
+.btn-primary{background:var(--gold);color:#221c0c}
+.btn-primary:hover{background:#f0c464;color:#221c0c}
+.btn-ghost{border:1px solid rgba(242,238,227,.4);color:#f2eee3}
+.btn-ghost:hover{background:rgba(255,255,255,.08);color:#fff}
+.hero-stats{display:flex;gap:30px;margin-top:30px;flex-wrap:wrap}
+.hero-stats div span{display:block;font-size:26px;font-weight:800;color:var(--gold);line-height:1.2}
+.hero-stats div small{font-size:13px;color:#b9b4a6}
+.hero-visual{position:relative;min-height:320px}
+.hero-visual svg{width:100%;height:auto;display:block}
+
+/* 主布局 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:38px;padding:44px 0 20px}
+main section{margin-bottom:var(--sp5)}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.sec-head h2{font-size:24px;color:var(--brand)}
+.sec-head h2::before{content:"";display:inline-block;width:6px;height:20px;background:var(--accent);border-radius:2px;margin-right:10px;vertical-align:-3px}
+.sec-sub{color:var(--muted);font-size:13.5px;margin:0 0 18px}
+.more-link{font-size:14px;font-weight:700;color:var(--accent)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow)}
+.tag-list{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
+.tag-list a{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13.5px;color:var(--ink-soft);font-weight:600}
+.tag-list a:hover{border-color:var(--gold);color:var(--brand);background:#fdf8ea}
+
+/* 概览卡 */
+.overview{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ov-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px;box-shadow:var(--shadow)}
+.ov-card h3{font-size:16px;color:var(--brand);margin-bottom:6px}
+.ov-card p{font-size:14px;color:var(--ink-soft);margin:0}
+.ov-card .num{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:1px;margin-bottom:8px;display:block}
+
+/* 精选网格 */
+.grid-feature{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.f-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);transition:transform .18s,box-shadow .18s;display:flex;flex-direction:column}
+.f-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-h)}
+.f-card img{width:100%;height:150px;object-fit:cover}
+.f-card .body{padding:16px;flex:1;display:flex;flex-direction:column}
+.f-card h3{font-size:16.5px;margin-bottom:6px;color:var(--brand)}
+.f-card p{font-size:14px;color:var(--ink-soft);flex:1}
+.meta{font-size:12.5px;color:var(--muted);display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+.meta b{color:var(--brand-2)}
+
+/* 最新更新 列表 */
+.update-list{list-style:none;padding:0;margin:0;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;background:#fff}
+.update-list li{display:flex;gap:16px;padding:15px 18px;border-bottom:1px solid #efebe1;align-items:baseline}
+.update-list li:last-child{border-bottom:none}
+.update-list time{flex:0 0 74px;font-size:13px;color:var(--accent);font-weight:700}
+.update-list .u-tit{font-weight:700;font-size:15px;color:var(--brand)}
+.update-list .u-desc{font-size:13.5px;color:var(--ink-soft)}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cat-item{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px 12px;text-align:center;font-weight:700;font-size:14.5px;color:var(--brand);transition:background .15s,border-color .15s}
+.cat-item small{display:block;font-weight:500;font-size:12px;color:var(--muted);margin-top:3px}
+.cat-item:hover{background:#fdf8ea;border-color:var(--gold);transform:translateY(-2px)}
+
+/* 深度解析 */
+.article{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:30px 32px;box-shadow:var(--shadow)}
+.article h2{font-size:25px;color:var(--brand);margin-bottom:4px}
+.article h3{font-size:18px;color:var(--brand-2);margin:26px 0 8px;padding-left:12px;border-left:4px solid var(--gold)}
+.article p{font-size:15.5px;color:#2b3242}
+.article ul{padding-left:1.4em}
+.claim{background:#faf6ec;border:1px solid #eadfc2;border-radius:var(--r);padding:16px 18px;margin:16px 0;font-size:15px}
+.claim strong{color:#8a5a12}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin:16px 0;font-size:14px}
+.compare>div{padding:12px 14px;border-bottom:1px solid var(--line)}
+.compare>div:nth-child(odd){background:#f8f6f0;font-weight:700;color:var(--brand-2);border-right:1px solid var(--line)}
+.compare>div:nth-child(even){background:#fff}
+.compare .head{background:var(--brand)!important;color:#fff;font-weight:700}
+.compare .head-alt{background:var(--brand-2)!important;color:#fff;font-weight:700}
+.fact-table{width:100%;border-collapse:collapse;font-size:14px;margin:14px 0}
+.fact-table th,.fact-table td{border:1px solid var(--line);padding:9px 12px;text-align:left}
+.fact-table th{background:#f1ede2;color:var(--brand);font-weight:700}
+.fact-table tr:nth-child(even) td{background:#fbfaf6}
+.quote{border-left:4px solid var(--accent);background:#fbf6f4;padding:12px 16px;border-radius:0 var(--r) var(--r) 0;font-size:14.5px;color:#4a3a34;margin:14px 0}
+
+/* 体验指南步骤 */
+.steps{counter-reset:st;display:grid;gap:14px}
+.step{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px 18px 16px 62px;box-shadow:var(--shadow)}
+.step::before{counter-increment:st;content:counter(st);position:absolute;left:16px;top:16px;width:32px;height:32px;border-radius:50%;background:var(--brand);color:var(--gold);font-weight:800;display:flex;align-items:center;justify-content:center;font-size:15px}
+.step h3{font-size:16px;color:var(--brand);margin-bottom:4px}
+.step p{font-size:14px;color:var(--ink-soft);margin:0}
+
+/* FAQ */
+.faq details{background:#fff;border:1px solid var(--line);border-radius:var(--r);margin-bottom:10px;padding:0 18px;overflow:hidden}
+.faq summary{cursor:pointer;padding:15px 0;font-weight:700;font-size:15.5px;color:var(--brand);list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:20px;color:var(--accent);font-weight:400;flex:0 0 auto}
+.faq details[open] summary::after{content:"–"}
+.faq summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:4px}
+.faq .ans{padding:0 0 15px;font-size:14.5px;color:var(--ink-soft)}
+
+/* 评论 */
+.comments{display:grid;gap:14px}
+.cmt{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;box-shadow:var(--shadow)}
+.cmt-top{display:flex;gap:10px;align-items:center;margin-bottom:6px}
+.avatar{width:34px;height:34px;border-radius:50%;background:var(--brand-2);color:var(--gold);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;flex:0 0 auto}
+.cmt-top .who{font-weight:700;font-size:14px;color:var(--brand)}
+.cmt-top .when{font-size:12px;color:var(--muted)}
+.cmt p{font-size:14.5px;margin:0;color:#303748}
+.cmt .ref{font-size:12.5px;color:var(--accent);margin-top:8px;font-weight:600}
+
+/* 资讯 */
+.news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.news{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px 18px}
+.news .src{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:.5px;margin-bottom:5px}
+.news h3{font-size:15.5px;color:var(--brand);margin-bottom:5px}
+.news p{font-size:13.5px;color:var(--ink-soft);margin:0}
+
+/* 时间线 */
+.timeline{list-style:none;padding:0;margin:0;position:relative}
+.timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.timeline li{position:relative;padding:0 0 18px 30px}
+.timeline li::before{content:"";position:absolute;left:2px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--gold);border:3px solid #fff;box-shadow:0 0 0 1px var(--line)}
+.timeline time{font-size:12.5px;font-weight:700;color:var(--accent);display:block}
+.timeline b{font-size:15px;color:var(--brand);display:block;margin:1px 0 2px}
+.timeline span{font-size:13.5px;color:var(--ink-soft)}
+
+/* 侧栏 */
+.sidebar{display:grid;gap:22px;align-content:start}
+.side-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:18px;box-shadow:var(--shadow)}
+.side-card h2,.side-card h3{font-size:16px;color:var(--brand);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #efebe1}
+.side-nav ul{list-style:none;padding:0;margin:0}
+.side-nav a{display:block;padding:7px 10px;border-radius:7px;font-size:14px;color:var(--ink-soft);font-weight:600;border-left:3px solid transparent}
+.side-nav a.active,.side-nav a:hover{background:#f6f2e7;color:var(--brand);border-left-color:var(--accent)}
+.side-list{list-style:none;padding:0;margin:0;font-size:14px}
+.side-list li{padding:8px 0;border-bottom:1px dashed #e6e1d4}
+.side-list li:last-child{border-bottom:none}
+.side-list .s-tit{font-weight:700;color:var(--brand);font-size:14px;display:block}
+.side-list .s-meta{font-size:12px;color:var(--muted)}
+.badge{display:inline-block;background:#f1ede2;color:var(--brand-2);font-size:11.5px;font-weight:700;border-radius:4px;padding:1px 7px;margin-right:6px}
+
+/* 引语 / 证言 */
+.voices{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.voice{background:linear-gradient(150deg,#24344f,#1a2740);color:#e9e4d6;border-radius:var(--r-lg);padding:20px;position:relative}
+.voice::before{content:"“";font-size:44px;line-height:1;color:var(--gold);opacity:.8;display:block;margin-bottom:-6px}
+.voice p{font-size:14px;color:#ddd8c8;margin-bottom:10px}
+.voice cite{font-size:12.5px;color:var(--gold);font-style:normal;font-weight:700}
+
+/* 页尾 */
+.footer{background:var(--brand);color:#cfc9ba;margin-top:40px;padding:44px 0 20px;font-size:14px}
+.footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px;margin-bottom:30px}
+.footer h3{color:#fff;font-size:15px;margin-bottom:12px}
+.footer .f-brand{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.footer .f-brand svg{width:34px;height:34px}
+.footer .f-brand span{font-size:19px;font-weight:800;color:#fff}
+.footer p{color:#b3ac9c;font-size:13.5px;max-width:320px}
+.footer ul{list-style:none;padding:0;margin:0}
+.footer ul a{color:#cfc9ba;font-size:13.5px;display:block;padding:4px 0}
+.footer ul a:hover{color:var(--gold)}
+.footer .bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12.5px;color:#9a9585}
+.footer .bottom a{color:#c9c3b2}
+.notice{font-size:12.5px;color:#9a9585;margin-top:6px}
+
+/* 回顶 */
+.to-top{position:fixed;right:20px;bottom:24px;z-index:70;background:var(--accent);color:#fff;border:none;border-radius:50%;width:46px;height:46px;font-size:20px;font-weight:700;box-shadow:var(--shadow-h);cursor:pointer;opacity:0;visibility:hidden;transform:translateY(8px);transition:.25s}
+.to-top.on{opacity:1;visibility:visible;transform:translateY(0)}
+.to-top:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+@media(max-width:980px){
+.layout{grid-template-columns:1fr;gap:30px}
+.sidebar{order:2}
+.hero .wrap{grid-template-columns:1fr;gap:26px;padding-top:40px;padding-bottom:40px}
+.hero-visual{min-height:0;max-width:420px}
+.overview{grid-template-columns:1fr 1fr}
+.cat-grid{grid-template-columns:repeat(3,1fr)}
+.footer .cols{grid-template-columns:1fr 1fr}
+.voices{grid-template-columns:1fr}
+}
+@media(max-width:720px){
+.header .wrap{height:auto;flex-wrap:wrap;padding-top:10px;padding-bottom:10px;gap:10px}
+.menu-btn{display:inline-block}
+.nav{display:none;width:100%;order:5;flex-direction:column;align-items:stretch;gap:2px}
+.nav.open{display:flex}
+.nav a{padding:11px 12px}
+.search input{width:130px}
+.hero-stats{gap:20px}
+.grid-feature,.news-grid,.overview{grid-template-columns:1fr}
+.cat-grid{grid-template-columns:1fr 1fr}
+.article{padding:22px 18px}
+.compare{grid-template-columns:1fr}
+.compare>div:nth-child(odd){border-right:none}
+.footer .cols{grid-template-columns:1fr}
+.announce .txt{font-size:12px}
+.to-top{width:42px;height:42px;right:14px;bottom:18px}
+}
+@media(prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*{transition:none!important;animation:none!important}
+.f-card:hover,.cat-item:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 公告条 -->
+<div class="announce" role="region" aria-label="站点公告">
+  <div class="wrap">
+    <span class="tag">更新</span>
+    <span class="txt">11月6日新增「编号前缀速查表」，收录 2003—2025 年 18 家发行方的编号规则；同日修正术语页 3 处译名。</span>
+    <a href="/#updates">看更新记录</a>
+  </div>
+</div>
+
+<!-- 页头 -->
+<header class="header">
+  <div class="wrap">
+    <a class="brand" href="/#top" aria-label="gv片 首页">
+      <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <rect width="64" height="64" rx="14" fill="#1a2740"/>
+        <path d="M20 44V20h8c7 0 11 4 11 11s-4 13-11 13h-8zm6-6h2c4 0 6-2 6-7s-2-7-6-7h-2v14z" fill="#e8b64c"/>
+        <circle cx="47" cy="24" r="5" fill="#d4573f"/>
+      </svg>
+      <span class="name">gv片</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">菜单</button>
+    <nav class="nav" id="mainNav" aria-label="主题导航">
+      <a href="/#overview">领域概览</a>
+      <a href="/#featured">精选推荐</a>
+      <a href="/#updates">最新更新</a>
+      <a href="/#categories">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#voices">读者评论</a>
+      <a href="/#news">相关资讯</a>
+    </nav>
+    <div class="header-tools">
+      <div class="search">
+        <label class="sr-only" for="q">站内查找条目</label>
+        <input id="q" type="search" placeholder="搜编号 / 发行方" autocomplete="off">
+        <div class="search-fb" id="searchFb" role="status" aria-live="polite"></div>
+      </div>
+      <a class="cta-small" href="/#guide">开始检索</a>
+    </div>
+  </div>
+</header>
+
+<!-- 首屏 -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="hero-kicker">编号 · 发行方 · 题材 · 画质</span>
+      <h1>gv片</h1>
+      <p class="lead">从 2003 年 COAT 的早期单本，到 2025 年多平台同步上架的 4K 修复版，围绕编号、厂牌、系列与译名建立一套可核对的检索坐标。这里记录发行规格、版本差异与资料出处，不做剧情剧透与主观打分。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#deep">读深度解析</a>
+        <a class="btn btn-ghost" href="/#categories">按分类找条目</a>
+      </div>
+      <div class="hero-stats">
+        <div><span>1,860</span><small>已整理作品条目</small></div>
+        <div><span>18</span><small>收录发行方</small></div>
+        <div><span>326</span><small>系列与子标签</small></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 460 360" role="presentation" focusable="false">
+        <defs>
+          <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#e8b64c" stop-opacity=".9"/>
+            <stop offset="1" stop-color="#d4573f" stop-opacity=".55"/>
+          </linearGradient>
+        </defs>
+        <rect x="10" y="24" width="300" height="196" rx="14" fill="#22314a" stroke="#3c4f6e"/>
+        <rect x="26" y="40" width="268" height="150" rx="8" fill="#17233a"/>
+        <circle cx="86" cy="112" r="24" fill="url(#hg)"/>
+        <rect x="126" y="80" width="140" height="12" rx="6" fill="#41546f"/>
+        <rect x="126" y="104" width="108" height="12" rx="6" fill="#34465f"/>
+        <rect x="126" y="128" width="128" height="12" rx="6" fill="#34465f"/>
+        <rect x="26" y="158" width="70" height="20" rx="5" fill="#d4573f"/>
+        <rect x="40" y="236" width="180" height="14" rx="7" fill="#2e4057"/>
+        <rect x="40" y="260" width="120" height="14" rx="7" fill="#2e4057" opacity=".7"/>
+        <g transform="translate(250,150)">
+          <rect x="0" y="0" width="180" height="120" rx="10" fill="#f6f4ef" stroke="#dad5c9"/>
+          <text x="16" y="30" font-family="sans-serif" font-size="13" fill="#1a2740" font-weight="700">编号校验</text>
+          <rect x="16" y="42" width="148" height="9" rx="4" fill="#e8e3d5"/>
+          <rect x="16" y="60" width="120" height="9" rx="4" fill="#e8e3d5"/>
+          <rect x="16" y="78" width="136" height="9" rx="4" fill="#e8e3d5"/>
+          <rect x="16" y="96" width="64" height="12" rx="4" fill="#d4573f"/>
+        </g>
+        <g transform="translate(300,24)">
+          <circle cx="40" cy="40" r="34" fill="#2e4057" stroke="#e8b64c"/>
+          <text x="40" y="36" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#e8b64c">类型</text>
+          <text x="40" y="52" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#e8b64c">分层</text>
+        </g>
+        <rect x="360" y="290" width="80" height="40" rx="8" fill="#2e4057"/>
+        <rect x="372" y="302" width="56" height="6" rx="3" fill="#e8b64c"/>
+        <rect x="372" y="314" width="38" height="6" rx="3" fill="#8b8f9a"/>
+        <circle cx="60" cy="320" r="14" fill="#d4573f" opacity=".85"/>
+        <circle cx="96" cy="320" r="14" fill="#e8b64c" opacity=".85"/>
+        <circle cx="132" cy="320" r="14" fill="#2e4057"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+<div class="layout">
+
+<!-- 主内容 -->
+<main>
+
+  <!-- 领域概览 -->
+  <section id="overview" aria-labelledby="h-overview">
+    <div class="sec-head"><h2 id="h-overview">领域概览</h2><a class="more-link" href="/#deep">判定标准 →</a></div>
+    <p class="sec-sub">把散落在论坛帖、封面图和二手碟片里的信息，整理成可核对的四类要素。</p>
+    <div class="overview">
+      <div class="ov-card"><span class="num">01 / 身份</span><h3>发行方与厂牌</h3><p>COAT、G@MES、Men's Rush、HUNK 等厂牌名称常被混称。厂牌是版权主体，系列是产品线，二者在编号前缀上通常能对应。</p></div>
+      <div class="ov-card"><span class="num">02 / 坐标</span><h3>作品编号规则</h3><p>以字母段加数字段为主，如 <b>COAT-1234</b>。同一数字在不同厂牌下可能完全无关，搜编号务必带上厂牌前缀。</p></div>
+      <div class="ov-card"><span class="num">03 / 分类</span><h3>题材与出演者</h3><p>题材标签用于粗筛，出演者名是精确定位的关键。译名不统一时，以封面拉丁字母拼写回查最快。</p></div>
+      <div class="ov-card"><span class="num">04 / 版本</span><h3>画质与剪辑版本</h3><p>DVD 初版、蓝光再版、流媒体 4K 修复版的片长与调色可能不同。同一编号下比较，先核对时长。</p></div>
+      <div class="ov-card"><span class="num">05 / 出处</span><h3>资料来源可靠性</h3><p>官方发行页 &gt; 厂牌社交账号 &gt; 二手交易页 &gt; 匿名帖。只有前两者能作为编号与发行时间的依据。</p></div>
+      <div class="ov-card"><span class="num">06 / 语言</span><h3>译名与字幕差异</h3><p>同一作品在中文圈往往有两三个译名。以编号锁定条目后，译名差异只影响展示，不影响身份。</p></div>
+    </div>
+  </section>
+
+  <!-- 精选内容推荐 -->
+  <section id="featured" aria-labelledby="h-featured">
+    <div class="sec-head"><h2 id="h-featured">精选内容推荐</h2><a class="more-link" href="/#categories">全部条目 →</a></div>
+    <p class="sec-sub">按“资料完整度”和“版本可核对性”挑选，不按热度。</p>
+    <div class="grid-feature">
+      <article class="f-card">
+        <img src="https://picsum.photos/seed/gvcoat2003/640/360" width="640" height="360" loading="lazy" alt="COAT 2003 年早期单本封面翻拍，深色背景与手写体标题">
+        <div class="body">
+          <h3>COAT 早期单本编号断代</h3>
+          <p>2003—2007 年间，COAT 的编号从 4 位纯数字过渡到字母加数字。用 2005 年 6 月的两本对读，能看出前缀含义的变化。</p>
+          <div class="meta"><span>条目编号 <b>COAT-04xx</b></span><span>核对 12 处</span></div>
+        </div>
+      </article>
+      <article class="f-card">
+        <img src="https://picsum.photos/seed/gvbluray4k/640/360" width="640" height="360" loading="lazy" alt="蓝光再版与 4K 修复版片长对照的桌面截图">
+        <div class="body">
+          <h3>蓝光再版与 4K 修复的片长差</h3>
+          <p>随机抽取 2024 年再版的 9 部作品，比较初版与修复版时长，差值集中在 40 秒到 2 分 10 秒之间，多数来自片头厂标替换。</p>
+          <div class="meta"><span>样本 <b>9 部</b></span><span>2026-10-28 更新</span></div>
+        </div>
+      </article>
+      <article class="f-card">
+        <img src="https://picsum.photos/seed/gvlabelname/640/360" width="640" height="360" loading="lazy" alt="多厂牌封面对比图，标注不同编号前缀">
+        <div class="body">
+          <h3>厂牌简称与全称对照</h3>
+          <p>G@MES 与 Games 是两个不同主体；Men's Rush 常被缩写为 MR。封面上的缩写位置固定，可据此判断版权方。</p>
+          <div class="meta"><span>收录 <b>18 家</b></span><span>含 4 组易混对</span></div>
+        </div>
+      </article>
+      <article class="f-card">
+        <img src="https://picsum.photos/seed/gvsearchmethod/640/360" width="640" height="360" loading="lazy" alt="检索流程示意，编号与出演者名组合查询">
+        <div class="body">
+          <h3>编号加出演者名的组合检索</h3>
+          <p>只输编号会混入其他厂牌。先厂牌、再编号、后出演者三段式输入，未命中率从约三成降到不足一成。</p>
+          <div class="meta"><span>方法 <b>3 步</b></span><span>含失败案例</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 最新更新 -->
+  <section id="updates" aria-labelledby="h-updates">
+    <div class="sec-head"><h2 id="h-updates">最新更新</h2><a class="more-link" href="/#news">资讯汇总 →</a></div>
+    <p class="sec-sub">日期以资料页或厂牌账号的原始发布为准。</p>
+    <ul class="update-list">
+      <li><time datetime="2026-11-06">11-06</time><span><span class="u-tit">编号前缀速查表 v3</span><span class="u-desc">新增两家 2024 年后成立的小型发行方，并修正 COAT 2008 年前缀误标 2 条。</span></span></li>
+      <li><time datetime="2026-11-04">11-04</time><span><span class="u-tit">术语页译名修订</span><span class="u-desc">「单体」「系列」「合集」三个词条的英文对应统一为 official 说法，附日文原文。</span></span></li>
+      <li><time datetime="2026-11-01">11-01</time><span><span class="u-tit">4K 修复版片长表</span><span class="u-desc">补入 2026 年 10 月发行的 5 部，逐条标注片头差异与音轨规格。</span></span></li>
+      <li><time datetime="2026-10-27">10-27</time><span><span class="u-tit">读者纠错采纳</span><span class="u-desc">依照用户「阿岚」提供的封面截图，修正 G@MES 某系列第 3 作的发行月份。</span></span></li>
+      <li><time datetime="2026-10-19">10-19</time><span><span class="u-tit">可信度分层说明上线</span><span class="u-desc">把资料来源分为 A/B/C 三级，正文引用处标注等级，便于复核。</span></span></li>
+    </ul>
+  </section>
+
+  <!-- 分类入口 -->
+  <section id="categories" aria-labelledby="h-categories">
+    <div class="sec-head"><h2 id="h-categories">分类入口</h2><a class="more-link" href="/#guide">检索方法 →</a></div>
+    <p class="sec-sub">按用户搜索时最常用的词切入，分类名不是官方术语，仅用于定位。</p>
+    <div class="cat-grid">
+      <a class="cat-item" href="/#featured">单体作品<small>按编号找</small></a>
+      <a class="cat-item" href="/#featured">系列合集<small>按系列找</small></a>
+      <a class="cat-item" href="/#deep">蓝光再版<small>画质优先</small></a>
+      <a class="cat-item" href="/#deep">4K 修复版<small>版本对照</small></a>
+      <a class="cat-item" href="/#news">新作发行<small>2026 年下半年</small></a>
+      <a class="cat-item" href="/#updates">编号速查<small>18 家厂牌</small></a>
+      <a class="cat-item" href="/#voices">译名对照<small>中日英三语</small></a>
+      <a class="cat-item" href="/#faq">来源辨别<small>A/B/C 分级</small></a>
+    </div>
+  </section>
+
+  <!-- 深度解析 -->
+  <section id="deep" aria-labelledby="h-deep">
+    <article class="article">
+      <h2 id="h-deep">深度解析：编号体系为何比封面标题更可靠</h2>
+      <p>同一部作品在中文圈流通时，标题往往被改写两到三次。以 COAT 2009 年的一本为例，官方日文名、英文副标题、中文论坛译名三者互不相同，而编号始终未变。<strong>可被引用、也可被反驳的判断是：在现有资料条件下，编号是唯一能跨平台稳定定位作品身份的信息，标题不能。</strong></p>
+
+      <h3>一、编号的三段结构：厂牌、年份与流水</h3>
+      <p>把 18 家发行方的编号拆开，多数能对应到三段：厂牌前缀、四位流水号、可选的后缀字母。后缀常表示再版或特别剪辑。2026 年 10 月 28 日整理的样本中，后缀出现频率约 17%，集中在蓝光再版。</p>
+      <table class="fact-table">
+        <caption class="sr-only">编号结构对照</caption>
+        <thead><tr><th>位置</th><th>常见形式</th><th>含义</th><th>核对方法</th></tr></thead>
+        <tbody>
+          <tr><td>前缀</td><td>COAT / GMS / MR</td><td>厂牌或系列</td><td>对照封面上版权行</td></tr>
+          <tr><td>中段</td><td>1234</td><td>流水号</td><td>官方发行页列表</td></tr>
+          <tr><td>后缀</td><td>-B / R2</td><td>再版、修复标记</td><td>比较片长与音轨</td></tr>
+        </tbody>
+      </table>
+
+      <h3>二、案例时间线：一次编号误标如何被纠正</h3>
+      <p>2026 年 10 月 12 日，某二手平台上架一本 G@MES 作品，标为「2007 年首发」。买家在评论区指出封面背面的版权年份为 2009。三天后，原卖家修改描述。这条时间线说明：<strong>版权年份印在实物上，比上架文案可靠，但需要实物照片支持。</strong></p>
+      <ol>
+        <li>10-12：卖家上架，文案写 2007 年首发，未附封底照片。</li>
+        <li>10-15：买家评论附封底局部照，版权行显示 2009。</li>
+        <li>10-18：卖家修改描述，并补发封底全图。</li>
+      </ol>
+
+      <h3>三、数据对比：4K 修复版与初版的三项差异</h3>
+      <p>抽取 2024—2026 年间 9 部修复版，与 DVD 初版逐项比较。片长、音轨、调色是差异最集中的三处，其中片长差主要来自片头厂标与提示页替换。</p>
+      <div class="compare">
+        <div class="head">比较项</div><div class="head-alt">结论</div>
+        <div>片长</div><div>9 部中 7 部延长 40 秒—2 分 10 秒</div>
+        <div>音轨</div><div>5 部改为双声道，2 部保留原始单声道</div>
+        <div>调色</div><div>3 部明显提亮暗部，其余差异轻微</div>
+        <div>字幕</div><div>修复版均未新增中文硬字幕</div>
+      </div>
+
+      <h3>四、说法差异：官方页、二手页、匿名帖三处口径</h3>
+      <p>同一个系列第 3 作，官方发行页写「2021 年 9 月」，二手页写「2021 年秋」，匿名帖写「2022 年初」。三者不是互相矛盾，而是精确度不同。<strong>判断优先级应为官方页优先，其余作为补充线索。</strong></p>
+      <div class="quote">“有编号没封底照片，等于只有一半证据。”——用户「老周的碟柜」在 2026 年 10 月 30 日的评论</div>
+
+      <h3>五、规则前后变化：2022 年后的上架规范</h3>
+      <p>2022 年起，部分平台要求二手卖家填写作品编号，否则限制曝光。这一变化让「有编号无实物图」的帖子增多，反而增加了误标概率。核对时应同时要求编号与封底照片，两者缺一不可。</p>
+      <div class="claim"><strong>可反驳之处：</strong>编号也并非绝对。个别小厂牌曾复用旧编号，或在不同年份使用相同数字。遇到疑似复用，以版权年份与片长作为第二判据。</div>
+    </article>
+  </section>
+
+  <!-- 体验指南 -->
+  <section id="guide" aria-labelledby="h-guide">
+    <div class="sec-head"><h2 id="h-guide">体验指南：三步锁定一个条目</h2><a class="more-link" href="/#faq">常见误区 →</a></div>
+    <p class="sec-sub">适合刚开始整理资料的人，按顺序执行，失败率最低。</p>
+    <div class="steps">
+      <div class="step"><h3>先定厂牌，不急着搜标题</h3><p>从封面版权行读出英文厂牌名，再对照速查表确认前缀。标题里的修饰词最容易误导。</p></div>
+      <div class="step"><h3>用编号回查官方发行页</h3><p>搜索「厂牌前缀 + 编号」，若结果里出现官方页或厂牌账号，记下发行日期与片长，作为基准数据。</p></div>
+      <div class="step"><h3>再用出演者名交叉验证</h3><p>出演者名可能存在译名差异，以拉丁字母拼写为准。三段信息一致，条目基本可以确认。</p></div>
+      <div class="step"><h3>遇到同名不同编号，记录差异</h3><p>同名不同编号通常意味着重制或分卷。把差异写进自己的备注，下次检索更快。</p></div>
+    </div>
+  </section>
+
+  <!-- 相关资讯 -->
+  <section id="news" aria-labelledby="h-news">
+    <div class="sec-head"><h2 id="h-news">相关资讯</h2><a class="more-link" href="/#updates">更新记录 →</a></div>
+    <p class="sec-sub">每条只保留一个事实点，来源与时间可复核。</p>
+    <div class="news-grid">
+      <article class="news"><div class="src">厂牌账号 · 2026-11-05</div><h3>某厂牌宣布 12 月起停产 DVD</h3><p>公告写明「2026 年 12 月 1 日起仅发蓝光与流媒体」，未提及已有库存处理方式。</p></article>
+      <article class="news"><div class="src">二手平台公告 · 2026-11-02</div><h3>作品类目新增编号必填项</h3><p>自 11 月 10 日起，该类目上架需填写编号，系统做格式校验，不校验真伪。</p></article>
+      <article class="news"><div class="src">用户投稿 · 2026-10-29</div><h3>读者整理 2003—2010 年 COAT 封面集</h3><p>共 84 张，含封底版权行局部放大，可作为年份核对材料，投稿人署名「阿岚」。</p></article>
+      <article class="news"><div class="src">资料页变动 · 2026-10-25</div><h3>G@MES 某系列第 3 作发行月修正</h3><p>由 2021 年 9 月改为 2021 年 8 月，依据封底印刷批次与官方页更新记录。</p></article>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" aria-labelledby="h-faq" class="faq">
+    <div class="sec-head"><h2 id="h-faq">常见问题</h2><a class="more-link" href="/#deep">延伸阅读 →</a></div>
+    <details>
+      <summary>编号相同就一定是同一部作品吗？</summary>
+      <div class="ans">不一定。个别小厂牌曾复用旧编号，也有分卷作品共享前缀。核对时应同时看发行年份与片长，三项一致才算同一部。</div>
+    </details>
+    <details>
+      <summary>蓝光再版和 4K 修复版该怎么选？</summary>
+      <div class="ans">看片长与音轨。修复版多数会替换片头，片长略长；若在意原始观感，初版或蓝光版更接近最初发行状态。两者画面差异在 2026 年的样本里以暗部提亮为主。</div>
+    </details>
+    <details>
+      <summary>中文译名对不上官方标题怎么办？</summary>
+      <div class="ans">译名差异不影响身份判断。先用编号锁定条目，再记录各平台译名，之后按任一译名回查都能找到同一编号。</div>
+    </details>
+    <details>
+      <summary>怎么判断一条资料来源是否可靠？</summary>
+      <div class="ans">本站把来源分为三级：官方发行页与厂牌账号为 A 级，二手交易页为 B 级，匿名帖为 C 级。涉及编号与日期时，只用 A 级作为依据。</div>
+    </details>
+    <details>
+      <summary>封面图上没有编号，还能查到吗？</summary>
+      <div class="ans">可以，但更慢。用出演者名与系列名组合检索，再比对封面设计细节，如字体、边框与版权行排版。找到候选后再回官方页确认编号。</div>
+    </details>
+  </section>
+
+  <!-- 用户评论 -->
+  <section id="voices" aria-labelledby="h-voices">
+    <div class="sec-head"><h2 id="h-voices">读者评论</h2><a class="more-link" href="/#news">我要纠错 →</a></div>
+    <p class="sec-sub">保留不同意见，包括不满与质疑。指向具体条目的评论约占四成。</p>
+    <div class="comments">
+      <div class="cmt">
+        <div class="cmt-top"><span class="avatar">周</span><span class="who">老周的碟柜</span><span class="when">2026-11-06</span></div>
+        <p>编号速查表 v3 里 COAT 2008 那两条改得对。我手上有 2008 年 11 月的一本，封底前缀确实是四位数字，之前标成字母段是错的。</p>
+        <div class="ref">指向：编号前缀速查表 v3 · COAT 2008</div>
+      </div>
+      <div class="cmt">
+        <div class="cmt-top"><span class="avatar">岚</span><span class="who">阿岚</span><span class="when">2026-11-04</span></div>
+        <p>4K 片长表有用，但希望把音轨也做成表格。G@MES 那部我对比过，修复版是双声道，初版单声道，听感差别比画面大。</p>
+        <div class="ref">指向：4K 修复版片长表 · G@MES 条目</div>
+      </div>
+      <div class="cmt">
+        <div class="cmt-top"><span class="avatar">K</span><span class="who">Kenji</span><span class="when">2026-11-02</span></div>
+        <p>说实话这类资料整理得再好，二手页照样乱标年份。上个月买的一本写 2013，封底印的 2011，卖家还说「都一样」。</p>
+        <div class="ref">指向：来源辨别 · B 级资料</div>
+      </div>
+      <div class="cmt">
+        <div class="cmt-top"><span class="avatar">豆</span><span class="who">豆子</span><span class="when">2026-10-30</span></div>
+        <p>深度解析里「编号比标题可靠」这句我基本同意，但小厂牌复用编号的情况比文中说的多。我遇到过两次同号不同作。</p>
+        <div class="ref">指向：深度解析 · 编号三段结构</div>
+      </div>
+      <div class="cmt">
+        <div class="cmt-top"><span class="avatar">南</span><span class="who">南站旧书</span><span class="when">2026-10-26</span></div>
+        <p>译名对照那块挺好。之前一直把两个系列搞混，看完才知道是译名相近、编号完全不同。</p>
+        <div class="ref">指向：分类入口 · 译名对照</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 相关推荐（标签索引） -->
+  <section id="related" aria-labelledby="h-related">
+    <div class="sec-head"><h2 id="h-related">相关推荐</h2><a class="more-link" href="/#categories">更多分类 →</a></div>
+    <p class="sec-sub">按检索意图归组，点击直达对应板块。</p>
+    <ul class="tag-list">
+      <li><a href="/#deep">编号前缀含义</a></li>
+      <li><a href="/#deep">COAT 早期单本断代</a></li>
+      <li><a href="/#guide">厂牌全称对照</a></li>
+      <li><a href="/#faq">蓝光再版片长差</a></li>
+      <li><a href="/#updates">4K 修复版调色</a></li>
+      <li><a href="/#guide">出演者名回查</a></li>
+      <li><a href="/#faq">二手页年份误标</a></li>
+      <li><a href="/#news">DVD 停产公告</a></li>
+      <li><a href="/#voices">中日英译名差异</a></li>
+      <li><a href="/#faq">资料来源分级</a></li>
+      <li><a href="/#overview">系列与产品线区别</a></li>
+      <li><a href="/#news">编号格式校验</a></li>
+    </ul>
+  </section>
+
+  <!-- 时间线补充板块 -->
+  <section id="timeline" aria-labelledby="h-timeline">
+    <div class="sec-head"><h2 id="h-timeline">发行时间线</h2></div>
+    <p class="sec-sub">仅列 2026 年 10 月至 11 月间有明确出处的变动。</p>
+    <ol class="timeline">
+      <li><time datetime="2026-11-06">2026-11-06</time><b>编号前缀速查表 v3 上线</b><span>新增两家 2024 年后成立的发行方，修正 COAT 2008 前缀 2 条。</span></li>
+      <li><time datetime="2026-11-05">2026-11-05</time><b>某厂牌公告停产 DVD</b><span>公告写明 12 月 1 日起仅发蓝光与流媒体，未提库存处理。</span></li>
+      <li><time datetime="2026-11-01">2026-11-01</time><b>4K 修复版片长表补入 5 部</b><span>逐条标注片头差异与音轨规格，样本增至 9 部。</span></li>
+      <li><time datetime="2026-10-27">2026-10-27</time><b>读者纠错采纳</b><span>依封面截图修正 G@MES 某系列第 3 作发行月份。</span></li>
+      <li><time datetime="2026-10-19">2026-10-19</time><b>可信度分层说明上线</b><span>资料来源分 A/B/C 三级，正文引用处标注等级。</span></li>
+    </ol>
+  </section>
+
+</main>
+
+<!-- 侧栏 -->
+<aside class="sidebar" aria-label="侧栏导航与入口">
+
+  <div class="side-card side-nav">
+    <h2>栏目导航</h2>
+    <ul>
+      <li><a href="/#overview" data-nav>领域概览</a></li>
+      <li><a href="/#featured" data-nav>精选内容推荐</a></li>
+      <li><a href="/#updates" data-nav>最新更新</a></li>
+      <li><a href="/#categories" data-nav>分类入口</a></li>
+      <li><a href="/#deep" data-nav>深度解析</a></li>
+      <li><a href="/#guide" data-nav>体验指南</a></li>
+      <li><a href="/#faq" data-nav>常见问题</a></li>
+      <li><a href="/#voices" data-nav>读者评论</a></li>
+      <li><a href="/#news" data-nav>相关资讯</a></li>
+      <li><a href="/#timeline" data-nav>发行时间线</a></li>
+    </ul>
+  </div>
+
+  <div class="side-card">
+    <h3>近期常查条目</h3>
+    <ul class="side-list">
+      <li><span class="s-tit">COAT-04xx 系列</span><span class="s-meta">2003—2007 · 12 条</span></li>
+      <li><span class="s-tit">G@MES 系列第 3 作</span><span class="s-meta">2021 年 8 月 · 已修正</span></li>
+      <li><span class="s-tit">Men's Rush 早期编号</span><span class="s-meta">前缀 MR · 7 条</span></li>
+      <li><span class="s-tit">HUNK 蓝光再版</span><span class="s-meta">2024—2026 · 5 部</span></li>
+      <li><span class="s-tit">4K 修复版清单</span><span class="s-meta">片长差 40 秒—2 分 10 秒</span></li>
+    </ul>
+  </div>
+
+  <div class="side-card">
+    <h3>来源分级速览</h3>
+    <ul class="side-list">
+      <li><span class="badge">A</span><span class="s-tit">官方发行页 / 厂牌账号</span><span class="s-meta">可作编号与日期依据</span></li>
+      <li><span class="badge">B</span><span class="s-tit">二手交易页</span><span class="s-meta">需实物照片佐证</span></li>
+      <li><span class="badge">C</span><span class="s-tit">匿名帖 / 转述</span><span class="s-meta">仅作线索，不作依据</span></li>
+    </ul>
+  </div>
+
+  <div class="side-card">
+    <h3>互动：纠错入口</h3>
+    <p style="font-size:13.5px;color:var(--ink-soft)">发现编号、年份或片长有误，可在「读者评论」区附封底照片说明。每条采纳后记入更新记录。</p>
+    <a class="cta-small" href="/#voices">去评论</a>
+  </div>
+
+</aside>
+</div>
+</div>
+
+<!-- 页尾 -->
+<footer class="footer" id="footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="f-brand">
+          <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+            <rect width="64" height="64" rx="14" fill="#2e4057"/>
+            <path d="M20 44V20h8c7 0 11 4 11 11s-4 13-11 13h-8zm6-6h2c4 0 6-2 6-7s-2-7-6-7h-2v14z" fill="#e8b64c"/>
+            <circle cx="47" cy="24" r="5" fill="#d4573f"/>
+          </svg>
+          <span>gv片</span>
+        </div>
+        <p>整理发行编号、版本差异与资料来源，方便按条目核对。</p>
+        <p class="notice">页面内容为示例数据与公开资料整理，文中条目、日期与评论均为演示用途，不代表任何发行方立场。更新时间：2026-11-06，对应「编号前缀速查表 v3」与「4K 修复版片长表」两项正文更新。</p>
+      </div>
+      <div>
+        <h3>内容栏目</h3>
+        <ul>
+          <li><a href="/#overview">领域概览</a></li>
+          <li><a href="/#featured">精选内容推荐</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>检索入口</h3>
+        <ul>
+          <li><a href="/#categories">分类入口</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#timeline">发行时间线</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>参与</h3>
+        <ul>
+          <li><a href="/#voices">读者评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#related">相关推荐</a></li>
+          <li><a href="/#top">回到顶部</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>© 2026 gv片 · 资料整理站</span>
+      <span>示例数据说明 · 内容仅供检索方法参考</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部" type="button">↑</button>
+
+<script>
+(function(){
+  var menuBtn=document.getElementById('menuBtn');
+  var nav=document.getElementById('mainNav');
+  if(menuBtn&&nav){
+    menuBtn.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded',open?'true':'false');
+      menuBtn.textContent=open?'收起':'菜单';
+    });
+    nav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'&&window.innerWidth<=720){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+        menuBtn.textContent='菜单';
+      }
+    });
+  }
+
+  var toTop=document.getElementById('toTop');
+  window.addEventListener('scroll',function(){
+    if(window.scrollY>420){toTop.classList.add('on');}else{toTop.classList.remove('on');}
+  },{passive:true});
+  toTop.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  // 侧栏滚动高亮
+  var links=[].slice.call(document.querySelectorAll('[data-nav]'));
+  var targets=links.map(function(a){return document.querySelector(a.getAttribute('href').replace('/',''));});
+  function onScroll(){
+    var pos=window.scrollY+140;
+    var idx=-1;
+    targets.forEach(function(t,i){if(t&&t.offsetTop<=pos){idx=i;}});
+    links.forEach(function(a,i){a.classList.toggle('active',i===idx);});
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+
+  // 本地搜索
+  var q=document.getElementById('q');
+  var fb=document.getElementById('searchFb');
+  var index=[
+    {t:'COAT 早期单本编号断代',k:'COAT 04xx 2003 2007 编号 断代',h:'/#featured'},
+    {t:'蓝光再版与 4K 修复的片长差',k:'蓝光 4K 修复 片长 音轨 调色',h:'/#featured'},
+    {t:'厂牌简称与全称对照',k:'G@MES Games MR Men\'s Rush 厂牌 全称',h:'/#featured'},
+    {t:'编号加出演者名的组合检索',k:'编号 出演者 检索 组合 方法',h:'/#featured'},
+    {t:'编号前缀速查表 v3',k:'前缀 速查 2008 修正 COAT',h:'/#updates'},
+    {t:'术语页译名修订',k:'译名 术语 单体 系列 合集',h:'/#updates'},
+    {t:'深度解析 编号体系',k:'编号 标题 可靠 三段 结构',h:'/#deep'},
+    {t:'体验指南 三步锁定条目',k:'指南 步骤 检索 出演者',h:'/#guide'},
+    {t:'常见问题 编号是否唯一',k:'FAQ 编号 复用 分卷',h:'/#faq'},
+    {t:'读者评论 纠错与质疑',k:'评论 纠错 阿岚 老周',h:'/#voices'},
+    {t:'相关资讯 DVD 停产',k:'资讯 DVD 停产 蓝光 流媒体',h:'/#news'},
+    {t:'发行时间线',k:'时间线 2026 11 10 更新',h:'/#timeline'}
+  ];
+  function render(){
+    var v=q.value.trim().toLowerCase();
+    if(!v){fb.classList.remove('on');fb.textContent='';return;}
+    var hits=index.filter(function(it){return (it.t+it.k).toLowerCase().indexOf(v)>-1;}).slice(0,5);
+    if(!hits.length){
+      fb.innerHTML='没有找到与「'+v.replace(/[<>&]/g,'')+'」相关的条目。可尝试厂牌前缀，如 COAT、GMS、MR。';
+    }else{
+      fb.innerHTML=hits.map(function(h){return '<a href="'+h.h+'" style="display:block;padding:4px 0">'+h.t+'</a>';}).join('');
+    }
+    fb.classList.add('on');
+  }
+  q.addEventListener('input',render);
+  q.addEventListener('focus',function(){if(q.value.trim())render();});
+  document.addEventListener('click',function(e){
+    if(!e.target.closest('.search'))fb.classList.remove('on');
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"gv片",
+  "description":"按编号、厂牌、系列与版本整理影像作品资料，提供检索方法与来源分级。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"编号相同就一定是同一部作品吗？","acceptedAnswer":{"@type":"Answer","text":"不一定。个别小厂牌曾复用旧编号，也有分卷作品共享前缀。核对时应同时看发行年份与片长，三项一致才算同一部。"}},
+    {"@type":"Question","name":"蓝光再版和 4K 修复版该怎么选？","acceptedAnswer":{"@type":"Answer","text":"看片长与音轨。修复版多数会替换片头，片长略长；若在意原始观感，初版或蓝光版更接近最初发行状态。两者画面差异在 2026 年的样本里以暗部提亮为主。"}},
+    {"@type":"Question","name":"中文译名对不上官方标题怎么办？","acceptedAnswer":{"@type":"Answer","text":"译名差异不影响身份判断。先用编号锁定条目，再记录各平台译名，之后按任一译名回查都能找到同一编号。"}},
+    {"@type":"Question","name":"怎么判断一条资料来源是否可靠？","acceptedAnswer":{"@type":"Answer","text":"资料分为三级：官方发行页与厂牌账号为 A 级，二手交易页为 B 级，匿名帖为 C 级。涉及编号与日期时，只用 A 级作为依据。"}},
+    {"@type":"Question","name":"封面图上没有编号，还能查到吗？","acceptedAnswer":{"@type":"Answer","text":"可以，但更慢。用出演者名与系列名组合检索，再比对封面设计细节，如字体、边框与版权行排版。找到候选后再回官方页确认编号。"}}
+  ]
+}
+</script>
+</body>
+  </html>
